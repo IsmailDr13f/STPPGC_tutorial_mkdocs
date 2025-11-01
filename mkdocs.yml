@@ -1,0 +1,79 @@
+site_name: "STPPGC Documentation"
+site_url: https://STPPGC.demo
+
+repo_url: https://github.com/YahyaAalaila/STPPGC
+repo_name: "GitHub – STPPGC"
+repo_branch: main
+
+theme:
+  name: material
+  logo: images/logo.png
+  favicon: images/logo.ico
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+    - content.code.annotate
+    - content.code.fold
+    - content.tabs.link
+    - toc.integrate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji
+  - toc:
+      permalink: true
+  
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Setup: setup.md
+  - Getting Started:
+      - Introduction: Getting_started/intro_benchstpp.md
+      - Repo Layout:
+          - Overview: Getting_started/Repo_Layout/repo_layout.md
+          - Where Data & Models Live: Getting_started/Repo_Layout/datasets_models_configs.md
+          - How Results Are Stored: Getting_started/Repo_Layout/results_storage.md
+      - Run First Experiment:
+          - Tiny Dataset Example: Getting_started/Run_First_Experiment/run_first_experiment.md
+      - Understanding Configs:
+          - Hydra Overview: Getting_started/Understanding Configs/understanding_configs.md
+          - Config Tree & Overrides: Getting_started/Understanding Configs/config_tree.md
+  - Models:
+      - Switching Models: Models/switching_models.md
+      - Losses and Metrics: Models/losses_and_metrics.md
+      - Runner Anatomy: Models/runner_anatomy.md
+      - Hyperparameters Surface: Models/hyperparameters_surface.md
+  - Data:
+      - Custom Models: Data/custom_models.md
+  - Experiments: experiments.md
+  - Analysis: analysis.md
+  - FAQ: faq.md
